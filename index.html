@@ -3,86 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajay Thakur - Marketing Expert</title>
+  <title>Ajay Thakur - VIP Network Marketing</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #1c1c1c, #292929);
-      color: #fff;
-      text-align: center;
+      padding: 0;
+      line-height: 1.6;
     }
     header {
-      background: #d4af37;
+      background: #222;
+      color: #fff;
       padding: 20px;
+      text-align: center;
     }
-    header img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
+    header h1 {
+      margin: 0;
+      font-size: 28px;
     }
-    h1 {
-      margin: 10px 0 0;
+    nav {
+      background: #444;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
     }
-    h2 {
-      font-weight: normal;
-      margin: 5px 0;
+    nav a {
+      color: #fff;
+      text-decoration: none;
     }
     section {
       padding: 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
-    .btn {
-      background: #d4af37;
-      color: black;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 10px 5px;
-      font-weight: bold;
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 5px;
     }
-    .btn:hover {
-      background: #b7950b;
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .stats div {
+      background: #f8f8f8;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1;
+      margin: 5px;
+    }
+    .services, .achievements, .testimonials {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .testimonials p {
+      background: #fff;
+      padding: 10px;
+      border-left: 4px solid #4CAF50;
+      margin: 10px 0;
     }
     footer {
-      background: #111;
-      padding: 15px;
-      font-size: 14px;
-      margin-top: 20px;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      margin: 5px 0;
+      text-decoration: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="ajay.jpg" alt="Ajay Thakur">
-    <h1>Ajay Thakur</h1>
-    <h2>Marketing Expert</h2>
-  </header>
+<header>
+  <h1>Ajay Thakur</h1>
+  <p>Marketing Expert • Network Growth Specialist</p>
+  <a class="btn" href="tel:+916398538328">📞 Call Me Now</a>
+  <a class="btn" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20join%20your%20team!">🚀 Join My Team</a>
+</header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am Ajay Thakur, a marketing professional with years of experience in helping people grow their business and achieve financial freedom through effective strategies.</p>
+<nav>
+  <a href="#services">Services</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#join">Join</a>
+</nav>
 
+<section>
+  <div class="stats">
+    <div><h3>7+ Years</h3>Experience</div>
+    <div><h3>1200+</h3>People Mentored</div>
+    <div><h3>330+</h3>Workshops & Sessions</div>
+  </div>
+
+  <div id="services" class="services">
+    <h2>High-Value Services</h2>
+    <p><b>Team Building Systems</b> - Onboarding flows, duplication frameworks & culture that lasts.</p>
+    <p><b>Digital Funnels</b> - Content, lead magnets & WhatsApp scripts that convert.</p>
+    <p><b>Sales Coaching</b> - Objection handling, closing methods, and accountability.</p>
+  </div>
+
+  <div id="achievements" class="achievements">
+    <h2>Achievements & Awards</h2>
+    <p>🏆 Diamond Director</p>
+    <p>🥇 Best Team Growth 2024</p>
+    <p>🎤 300+ Stage Talks</p>
+    <p>🌐 10k+ Community Reach</p>
+  </div>
+
+  <div id="testimonials" class="testimonials">
+    <h2>What People Say</h2>
+    <p>“Ajay sir ke 30–60–90 plan ne meri monthly income double kar di.” — Rohan S., Team Lead</p>
+    <p>“WhatsApp funnel scripts bahut powerful hain. Conversion rate 3x ho gaya.” — Priya K., Marketer</p>
+    <p>“Training aur support 10/10. Community se daily motivation milta hai.” — Imran A., New Joiner</p>
+  </div>
+
+  <div id="join">
     <h2>Join My Team</h2>
-    <p>Be part of a growing network and start your journey towards success. Learn marketing skills, grow your income, and achieve your dreams!</p>
-    <a class="btn" href="https://wa.me/916398538328" target="_blank">📲 Contact on WhatsApp</a>
+    <p>Fill this quick form — you'll get a WhatsApp invite for a short discovery call.</p>
+    <a class="btn" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20know%20more!">💬 Submit & Open WhatsApp</a>
+  </div>
+</section>
 
-    <h2>Articles</h2>
-    <p>Stay tuned for tips and strategies on marketing, sales, and leadership to take your career to the next level.</p>
-
-    <h2>Contact</h2>
-    <p>📞 Phone: <a href="tel:+916398538328" style="color:#d4af37;">+91 6398538328</a></p>
-    <p>📲 WhatsApp: <a href="https://wa.me/916398538328" target="_blank" style="color:#d4af37;">Click here</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Ajay Thakur - All Rights Reserved.
-  </footer>
+<footer>
+  © Ajay Thakur · VIP Network Marketing
+</footer>
 
 </body>
 </html>
