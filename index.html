@@ -1,449 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ajay Thakur — Marketing Expert | VIP</title>
-  <meta name="description" content="Ajay Thakur — Marketing Expert & Network Growth Specialist. Join the winning team, learn proven strategies and start earning.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b0b0b;
-      --bg-2: #121212;
-      --text: #f7f7f7;
-      --muted: #cfcfcf;
-      --gold: #f5c542;           /* primary gold */
-      --gold-2: #d4af37;         /* deep gold */
-      --accent: #111921;         /* card */
-      --ring: 0 8px 30px rgba(245,197,66,.25);
-      --radius: 18px;
-      --note: rgba(245,197,66,.12);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(100% 120% at 0% 0%, rgba(245,197,66,.04), transparent 40%), linear-gradient(180deg, #000 0%, #0b0b0b 40%, #0b0b0b 100%);font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--text);scroll-behavior:smooth}
-    a{color:var(--gold)}
-    img{max-width:100%;display:block}
+<!-- ======================== EARNING GROWTH EXPLAINER (Black+Gold) ======================== -->
+<section id="earnings" class="earn-wrap">
+  <div class="earn-container">
+    <h2 class="earn-title">How Earnings Grow — From One Share to a Team</h2>
+    <p class="earn-sub">एक share से team बनती है, team से income compound होती है. <span class="earn-note">Examples for education — results vary.</span></p>
 
-    /* Header / Nav */
-    header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .container{max-width:1100px;margin:auto;padding:0 16px}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-    .brand .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 40% 40%, #fff 0 10%, var(--gold) 15%, var(--gold-2) 70%);box-shadow:0 0 18px rgba(245,197,66,.8)}
-    .links{display:flex;gap:18px}
-    .links a{color:#e9e2c6;text-decoration:none;font-weight:600;opacity:.8}
-    .links a:hover{opacity:1}
-    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
+    <!-- Scenario Tabs -->
+    <div class="earn-tabs" role="tablist" aria-label="Growth Scenarios">
+      <button class="earn-tab is-active" data-scenario="ideal" role="tab" aria-selected="true">Ideal</button>
+      <button class="earn-tab" data-scenario="real" role="tab" aria-selected="false">Realistic</button>
+      <button class="earn-tab" data-scenario="safe" role="tab" aria-selected="false">Conservative</button>
+    </div>
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;padding:52px 16px 28px;background:radial-gradient(60% 60% at 50% 0%, rgba(245,197,66,.1), transparent 70%)}
-    .photo{width:180px;height:180px;border-radius:50%;border:6px solid var(--gold);box-shadow:0 0 40px rgba(245,197,66,.55), inset 0 0 40px rgba(245,197,66,.2);object-fit:cover}
-    .glow{width:220px;height:220px;border-radius:50%;filter:blur(40px);background:radial-gradient(circle, rgba(245,197,66,.55), transparent 70%);position:absolute;transform:translateY(-10px);z-index:-1}
-    .hero h1{font-size:clamp(32px,6vw,54px);margin:14px 0 6px;color:var(--gold);font-weight:800}
-    .hero p.tag{color:#e7e0c7;font-weight:600;opacity:.95;margin:0 0 18px}
-    .hero .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
-    .btn.alt{background:#161616;color:#fff;border:1px solid rgba(255,255,255,.12)}
-
-    /* Stat cards */
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px auto 8px;max-width:900px}
-    .stat{background:var(--accent);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px;text-align:center}
-    .stat .n{font-size:26px;font-weight:800;color:#ffe08a}
-    .stat .l{font-size:12px;color:var(--muted)}
-
-    section{padding:48px 0}
-    h2.section-title{font-size:26px;margin:0 0 12px;text-align:center}
-    p.sub{text-align:center;color:var(--muted);margin:0 0 24px}
-
-    /* Grids / Cards */
-    .grid{display:grid;gap:16px}
-    .grid.s3{grid-template-columns:repeat(3,1fr)}
-    .card{background:#121316;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;box-shadow:0 0 0 1px rgba(245,197,66,.08) inset}
-    .card h3{margin:0 0 6px}
-    .card p{margin:0;color:#dadada}
-
-    /* Achievements */
-    .badge-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .badge{padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(245,197,66,.15),rgba(245,197,66,.05));border:1px solid rgba(245,197,66,.35);color:#ffe08a;font-weight:700}
-
-    /* Video */
-    .video{max-width:900px;margin:auto;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--ring)}
-    .video iframe{width:100%;height:360px;border:0;display:block;background:#000}
-
-    /* Testimonials */
-    .testi{max-width:900px;margin:10px auto 0}
-    .slide{background:#111319;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;min-height:140px;display:none}
-    .slide.active{display:block}
-    .who{font-weight:700;color:#ffe08a;margin-top:8px}
-
-    /* Join form */
-    .form{max-width:880px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .form input,.form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f1116;color:#fff;outline:none}
-    .form textarea{min-height:120px;grid-column:1 / -1}
-    .form .submit{grid-column:1 / -1}
-
-    /* Sticky bar */
-    .sticky{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:12px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);z-index:60}
-
-    footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
-
-    /* reveal on scroll */
-    .reveal{opacity:0;transform:translateY(16px);transition:.7s ease}
-    .reveal.show{opacity:1;transform:none}
-
-    /* 7 Icons (interactive) */
-    .icons-wrap{max-width:1000px;margin:0 auto}
-    .icon-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
-    .icon-card{position:relative;background:#101319;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px;text-align:center;cursor:pointer;transition:.25s ease;will-change:transform}
-    .icon-emoji{font-size:28px;display:block}
-    .icon-title{font-weight:700;margin-top:6px}
-    .icon-note{position:absolute;inset:auto 8px 8px 8px;background:var(--note);border:1px solid rgba(245,197,66,.35);border-radius:12px;padding:10px;font-size:12px;line-height:1.3;display:none}
-    .icon-card.active{transform:scale(1.06);box-shadow:0 12px 40px rgba(245,197,66,.15)}
-    .icon-card.active .icon-note{display:block}
-
-    /* Floating Chat */
-    .chat-fab{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;cursor:pointer;box-shadow:var(--ring);z-index:70}
-    .chat-box{position:fixed;right:16px;bottom:82px;width:320px;max-width:92vw;background:#0e1117;border:1px solid rgba(255,255,255,.1);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.45);display:none;overflow:hidden;z-index:70}
-    .chat-head{padding:12px 14px;background:#151922;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between}
-    .chat-head span{font-weight:800;color:var(--gold)}
-    .chat-body{max-height:340px;overflow:auto;padding:12px}
-    .q-list{display:grid;gap:8px}
-    .q-btn{padding:10px 12px;border-radius:12px;background:#11151f;border:1px solid rgba(255,255,255,.08);text-align:left;color:#eaeaea;cursor:pointer}
-    .ans{margin-top:12px;background:#0f1420;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px;color:#ddd}
-    .close-x{cursor:pointer;opacity:.8}
-
-    /* Responsive */
-    @media (max-width: 1100px){
-      .icon-grid{grid-template-columns:repeat(4,1fr)}
-    }
-    @media (max-width: 720px){
-      .stats{grid-template-columns:1fr 1fr}
-      .grid.s3{grid-template-columns:1fr 1fr}
-      .icon-grid{grid-template-columns:repeat(3,1fr)}
-    }
-    @media (max-width: 520px){
-      .links{display:none}
-      .stats{grid-template-columns:1fr}
-      .grid.s3{grid-template-columns:1fr}
-      .icon-grid{grid-template-columns:repeat(2,1fr)}
-    }
-  </style>
-</head>
-<body>
-  <!-- NAV -->
-  <header>
-    <div class="container nav">
-      <div class="brand"><span class="dot" aria-hidden="true"></span> Ajay <span style="color:var(--gold)">Thakur</span></div>
-      <div class="links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#icons">Why People Choose</a>
-        <a href="#why-marketing">Why Marketing</a>
-        <a href="#earning">Earning</a>
-        <a href="#why-fail">Why Fail</a>
-        <a href="#join">Join</a>
+    <!-- Flow Nodes + Arrows -->
+    <div class="earn-flow">
+      <!-- 5 levels -->
+      <div class="earn-node">
+        <div class="earn-bubble">
+          <div class="earn-level">L1</div>
+          <div class="earn-members"><span data-m="0">0</span> members</div>
+          <div class="earn-commission">₹<span data-cp="0">0</span> /person</div>
+          <div class="earn-amount">₹<span data-amt="0">0</span></div>
+        </div>
+        <div class="earn-arrow" aria-hidden="true"></div>
       </div>
-      <a class="cta" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20join%20your%20team!" target="_blank">WhatsApp</a>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div style="position:relative">
-      <div class="glow" aria-hidden="true"></div>
-      <img src="ajay.jpg" alt="Ajay Thakur" class="photo"/>
-    </div>
-    <h1 class="reveal">Ajay Thakur</h1>
-    <p class="tag reveal" style="transition-delay:.05s">Marketing Expert • Network Growth Specialist</p>
-    <div class="actions reveal" style="transition-delay:.1s">
-      <a class="btn" href="tel:+916398538328">📞 Call Me Now</a>
-      <a class="btn alt" href="#join">🚀 Join My Team</a>
-    </div>
-    <div class="stats reveal" style="transition-delay:.15s">
-      <div class="stat"><div class="n">7+ Years</div><div class="l">Experience</div></div>
-      <div class="stat"><div class="n">1200+</div><div class="l">People Mentored</div></div>
-      <div class="stat"><div class="n">330+</div><div class="l">Workshops & Sessions</div></div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="container reveal">
-    <h2 class="section-title">High-Value Services</h2>
-    <p class="sub">Focused on results, duplication and consistent growth.</p>
-    <div class="grid s3">
-      <div class="card"><h3>Team Building Systems</h3><p>Onboarding flows, duplication frameworks & culture that lasts.</p></div>
-      <div class="card"><h3>Digital Funnels</h3><p>Content, lead magnets & WhatsApp scripts that convert.</p></div>
-      <div class="card"><h3>Sales Coaching</h3><p>Objection handling, closing methods, and accountability.</p></div>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="container reveal">
-    <h2 class="section-title">Achievements & Awards</h2>
-    <p class="sub">Milestones that build trust and momentum.</p>
-    <div class="badge-row">
-      <span class="badge">🏆 Diamond Director</span>
-      <span class="badge">🥇 Best Team Growth 2024</span>
-      <span class="badge">🎤 300+ Stage Talks</span>
-      <span class="badge">🌐 10k+ Community Reach</span>
-    </div>
-  </section>
-
-  <!-- WATCH -->
-  <section class="container reveal">
-    <h2 class="section-title">Watch: My Approach</h2>
-    <p class="sub">A quick 2-minute overview on how we help you start and scale.</p>
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- 7 ICONS SECTION -->
-  <section id="icons" class="container reveal">
-    <h2 class="section-title">Why People Choose Network Marketing <span style="color:var(--gold)">| लोग क्यों चुनते हैं</span></h2>
-    <p class="sub">Tap icons to see notes · आइकन पर टैप करें</p>
-    <div class="icons-wrap">
-      <div class="icon-grid" id="iconGrid">
-        <!-- 1 -->
-        <div class="icon-card" data-note="Start small, scale fast. | छोटा शुरू, तेज़ बढ़त।">
-          <span class="icon-emoji">💰</span>
-          <div class="icon-title">Extra Income</div>
-          <div class="icon-note"></div>
+      <div class="earn-node">
+        <div class="earn-bubble">
+          <div class="earn-level">L2</div>
+          <div class="earn-members"><span data-m="1">0</span> members</div>
+          <div class="earn-commission">₹<span data-cp="1">0</span> /person</div>
+          <div class="earn-amount">₹<span data-amt="1">0</span></div>
         </div>
-        <!-- 2 -->
-        <div class="icon-card" data-note="More learning, less risk. | सीख ज्यादा, रिस्क कम।">
-          <span class="icon-emoji">💡</span>
-          <div class="icon-title">Low Cost</div>
-          <div class="icon-note"></div>
+        <div class="earn-arrow" aria-hidden="true"></div>
+      </div>
+      <div class="earn-node">
+        <div class="earn-bubble">
+          <div class="earn-level">L3</div>
+          <div class="earn-members"><span data-m="2">0</span> members</div>
+          <div class="earn-commission">₹<span data-cp="2">0</span> /person</div>
+          <div class="earn-amount">₹<span data-amt="2">0</span></div>
         </div>
-        <!-- 3 -->
-        <div class="icon-card" data-note="Build once, earn repeat. | एक बार बनाओ, बार-बार कमाओ।">
-          <span class="icon-emoji">⏱️</span>
-          <div class="icon-title">Time Freedom</div>
-          <div class="icon-note"></div>
+        <div class="earn-arrow" aria-hidden="true"></div>
+      </div>
+      <div class="earn-node">
+        <div class="earn-bubble">
+          <div class="earn-level">L4</div>
+          <div class="earn-members"><span data-m="3">0</span> members</div>
+          <div class="earn-commission">₹<span data-cp="3">0</span> /person</div>
+          <div class="earn-amount">₹<span data-amt="3">0</span></div>
         </div>
-        <!-- 4 -->
-        <div class="icon-card" data-note="Network effects compound. | नेटवर्क इफेक्ट कम्पाउंड।">
-          <span class="icon-emoji">📈</span>
-          <div class="icon-title">Unlimited Growth</div>
-          <div class="icon-note"></div>
-        </div>
-        <!-- 5 -->
-        <div class="icon-card" data-note="Learn together, win together. | साथ सीखो, साथ जीतो।">
-          <span class="icon-emoji">🤝</span>
-          <div class="icon-title">Community</div>
-          <div class="icon-note"></div>
-        </div>
-        <!-- 6 -->
-        <div class="icon-card" data-note="Sales, content, leadership. | सेल्स, कंटेंट, लीडरशिप।">
-          <span class="icon-emoji">🧠</span>
-          <div class="icon-title">Skill Growth</div>
-          <div class="icon-note"></div>
-        </div>
-        <!-- 7 -->
-        <div class="icon-card" data-note="Income beyond hours. | घंटों से बड़ी आय।">
-          <span class="icon-emoji">🏆</span>
-          <div class="icon-title">Legacy</div>
-          <div class="icon-note"></div>
+        <div class="earn-arrow" aria-hidden="true"></div>
+      </div>
+      <div class="earn-node">
+        <div class="earn-bubble">
+          <div class="earn-level">L5</div>
+          <div class="earn-members"><span data-m="4">0</span> members</div>
+          <div class="earn-commission">₹<span data-cp="4">0</span> /person</div>
+          <div class="earn-amount">₹<span data-amt="4">0</span></div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- PRO PAGE 1 -->
-  <section id="why-marketing" class="container reveal">
-    <h2 class="section-title">Strategic Marketing <span style="color:var(--gold)">| रणनीतिक मार्केटिंग</span></h2>
-    <p class="sub">From Visibility to Velocity · पहचान से तेज़ी तक</p>
-    <div class="grid s3">
-      <div class="card"><h3>Brand Recall · ब्रांड रिकॉल</h3><p>Be seen, be remembered, be chosen. | जो दिखता है वही चुना जाता है।</p></div>
-      <div class="card"><h3>Qualified Reach · सही पहुँच</h3><p>Right message → right audience → higher conversions. | सही मैसेज, सही ऑडियंस, ज़्यादा कन्वर्ज़न।</p></div>
-      <div class="card"><h3>Competitive Edge · बढ़त</h3><p>Consistency keeps you relevant and preferred. | निरंतरता से relevance बनी रहती है।</p></div>
-      <div class="card"><h3>ROI Focus · ROI केंद्रित</h3><p>Every rupee tracked, optimized & scaled. | हर खर्चा ट्रैक, ऑप्टिमाइज़ और स्केल।</p></div>
-      <div class="card"><h3>Trust → Revenue</h3><p>Campaigns that compound trust & revenue. | भरोसा और रेवेन्यू—दोनों बढ़ाएँ।</p></div>
-      <div class="card"><h3>Action</h3><p><a class="btn" href="https://wa.me/916398538328?text=I%20want%20a%2015-min%20discovery%20call">Book Discovery Call · कॉल बुक करें</a></p></div>
-    </div>
-  </section>
-
-  <!-- PRO PAGE 2 -->
-  <section id="earning" class="container reveal">
-    <h2 class="section-title">Earning Potential <span style="color:var(--gold)">| कमाई की संभावनाएँ</span></h2>
-    <p class="sub">Scalable · Sustainable · Limitless · स्केलेबल · टिकाऊ · बेमिसाल</p>
-    <div class="grid s3">
-      <div class="card"><h3>Multiple Streams</h3><p>Active + passive via duplication. | डुप्लिकेशन से एक्टिव + पैसिव आय।</p></div>
-      <div class="card"><h3>No Cap</h3><p>Performance drives payouts. | प्रदर्शन तय करता है।</p></div>
-      <div class="card"><h3>Smart Systems</h3><p>Automation compounds time. | ऑटोमेशन समय multiply करता है।</p></div>
-      <div class="card"><h3>Predictable Growth</h3><p>Track → optimize → scale. | ट्रैक → ऑप्टिमाइज़ → स्केल।</p></div>
-      <div class="card"><h3>Credibility</h3><p>Skill + System + Speed unlock income. | स्किल + सिस्टम + स्पीड = इनकम।</p></div>
-      <div class="card"><h3>Action</h3><p><a class="btn" href="#join">See Sample Plan · सैंपल प्लान देखें</a></p></div>
-    </div>
-  </section>
-
-  <!-- PRO PAGE 3 -->
-  <section id="why-fail" class="container reveal">
-    <h2 class="section-title">Why People Fail <span style="color:var(--gold)">| लोग असफल क्यों होते हैं</span></h2>
-    <p class="sub">Failure is a pattern—so is success. · असफलता भी पैटर्न है, सफलता भी।</p>
-    <div class="grid s3">
-      <div class="card"><h3>Inconsistency → Rhythm</h3><p>Weekly scorecards fix habits. | साप्ताहिक स्कोरकार्ड से आदत सेट।</p></div>
-      <div class="card"><h3>No Skill Plan → Sprints</h3><p>Structured learning cycles. | स्ट्रक्चर्ड ट्रेनिंग स्प्रिंट।</p></div>
-      <div class="card"><h3>Weak Mentor → 1:1</h3><p>Guidance & review cadence. | 1:1 गाइडेंस और रिव्यू।</p></div>
-      <div class="card"><h3>Outreach Fear → Scripts</h3><p>Roleplays build confidence. | रोलप्ले से कॉन्फिडेंस।</p></div>
-      <div class="card"><h3>Short-term → 90-Day</h3><p>Compounding execution plan. | 90-दिन का कम्पाउंडिंग प्लान।</p></div>
-      <div class="card"><h3>Assurance</h3><p>Systems replace guesswork. | सिस्टम अनुमान की जगह लेते हैं।</p></div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="container reveal">
-    <h2 class="section-title">What People Say</h2>
-    <p class="sub">Real results from real teammates & clients.</p>
-    <div class="testi">
-      <div class="slide active">
-        “Ajay sir ke 30–60–90 plan ne meri monthly income double kar di.”
-        <div class="who">— Rohan S., Team Lead</div>
+    <!-- Totals -->
+    <div class="earn-totals">
+      <div class="earn-total-card">
+        <div class="earn-total-label">Scenario Total (L1–L5)</div>
+        <div class="earn-total-value">₹<span id="earnTotal">0</span></div>
       </div>
-      <div class="slide">
-        “WhatsApp funnel scripts bahut powerful hain. Conversion rate 3x ho gaya.”
-        <div class="who">— Priya K., Marketer</div>
-      </div>
-      <div class="slide">
-        “Training aur support 10/10. Community se daily motivation milta hai.”
-        <div class="who">— Imran A., New Joiner</div>
+      <div class="earn-total-card">
+        <div class="earn-total-label">Logic</div>
+        <div class="earn-logic">
+          <div>Speed = Referrals × Activation × Training</div>
+          <div>Teach your L1 to teach their L1 — duplication wins.</div>
+          <div>Quality conversations > spam. Consistency compounding.</div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- PRO PAGE 4 -->
-  <section id="services-plus" class="container reveal">
-    <h2 class="section-title">Services & Team Support <span style="color:var(--gold)">| सेवाएँ व टीम सपोर्ट</span></h2>
-    <p class="sub">Your goals. Our systems. Shared outcomes. · आपके लक्ष्य, हमारे सिस्टम—नतीजे साझा।</p>
-    <div class="grid s3">
-      <div class="card"><h3>Strategy & Funnels</h3><p>Positioning, scripts, WhatsApp flows. | पोज़िशनिंग, स्क्रिप्ट्स, फ्लो।</p></div>
-      <div class="card"><h3>Skill Training</h3><p>Sales, leadership, content, objections. | सेल्स, लीडरशिप, कंटेंट।</p></div>
-      <div class="card"><h3>Tools Library</h3><p>Templates, assets, trackers. | टेम्प्लेट्स, एसेट्स, ट्रैकर्स।</p></div>
-      <div class="card"><h3>Accountability</h3><p>Weekly reviews, KPIs, leaderboards. | साप्ताहिक रिव्यू, KPI।</p></div>
-      <div class="card"><h3>Community</h3><p>Events, masterminds, recognition. | इवेंट्स, मास्टरमाइंड, रेकग्निशन।</p></div>
-      <div class="card"><h3>Get Started</h3><p><a class="btn" href="https://wa.me/916398538328?text=I%20want%20a%20strategy%20call">Strategy Call · स्ट्रैटेजी कॉल</a></p></div>
+    <!-- Story Points -->
+    <div class="earn-story">
+      <div class="earn-point"><b>Step 1:</b> You share with 3. They activate. <em>Commission on Level-1.</em></div>
+      <div class="earn-point"><b>Step 2:</b> They share further. <em>Level-2 trickle-up adds up.</em></div>
+      <div class="earn-point"><b>Step 3:</b> Team grows. <em>Small per-head × many = big totals.</em></div>
     </div>
-  </section>
 
-  <!-- JOIN -->
-  <section id="join" class="container reveal">
-    <h2 class="section-title">Join My Team</h2>
-    <p class="sub">Fill this quick form — you'll get a WhatsApp invite for a short discovery call.</p>
-    <form id="leadForm" class="form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="tel" id="phone" placeholder="WhatsApp Number" required>
-      <input type="email" id="email" placeholder="Email (optional)">
-      <textarea id="goals" placeholder="Tell me about your goals (optional)"></textarea>
-      <button class="btn submit" type="submit">Submit & Open WhatsApp</button>
-    </form>
-  </section>
-
-  <!-- Sticky CTA -->
-  <div class="sticky">
-    <a class="btn" href="tel:+916398538328">📞 Call</a>
-    <a class="btn" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20know%20more!" target="_blank">💬 WhatsApp</a>
+    <p class="earn-disclaimer">Disclaimer: Ye examples demo ke liye hain. Real income plan, volume, activation, training aur market par depend karti hai.</p>
   </div>
+</section>
 
-  <footer>
-    <div class="container">© <span id="y"></span> Ajay Thakur · VIP Network Marketing</div>
-  </footer>
+<style>
+  /* --------- Scoped styles (won't clash) --------- */
+  .earn-wrap{background:radial-gradient(60% 80% at 0% 0%, rgba(245,197,66,.06), transparent 50%), #0b0b0b;padding:56px 0}
+  .earn-container{max-width:1100px;margin:auto;padding:0 16px;color:#f7f7f7;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .earn-title{font-size:28px;margin:0 0 6px;text-align:center;color:#f5c542;font-weight:800;letter-spacing:.3px}
+  .earn-sub{margin:0 0 16px;text-align:center;color:#d9d3bf}
+  .earn-sub .earn-note{opacity:.8;font-size:.95em}
+  .earn-tabs{display:flex;gap:10px;justify-content:center;margin:18px 0 24px}
+  .earn-tab{background:#141414;border:1px solid rgba(255,255,255,.12);color:#e9e2c6;padding:10px 14px;border-radius:999px;font-weight:700;cursor:pointer}
+  .earn-tab.is-active{background:linear-gradient(135deg,#f5c542,#d4af37);color:#000;box-shadow:0 8px 30px rgba(245,197,66,.25)}
+  .earn-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:center;margin:8px 0 16px}
+  .earn-node{position:relative;display:flex;align-items:center;gap:10px}
+  .earn-bubble{background:#121316;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:14px;min-height:110px;display:grid;justify-items:center;text-align:center;box-shadow:0 0 0 1px rgba(245,197,66,.08) inset}
+  .earn-bubble:hover{transform:translateY(-2px) scale(1.02);transition:.25s ease;box-shadow:0 10px 30px rgba(245,197,66,.12),0 0 0 1px rgba(245,197,66,.12) inset}
+  .earn-level{font-weight:900;color:#ffe08a;font-size:14px;letter-spacing:.5px}
+  .earn-members{font-weight:700;color:#fff}
+  .earn-commission{font-size:12px;color:#cfcfcf}
+  .earn-amount{font-size:18px;font-weight:900;color:#fff}
+  .earn-arrow{flex:1;height:2px;background:linear-gradient(90deg, rgba(212,175,55,.0), rgba(212,175,55,.9), rgba(212,175,55,.0));position:relative}
+  .earn-arrow:after{content:"";position:absolute;right:-6px;top:-5px;border-left:8px solid #d4af37;border-top:6px solid transparent;border-bottom:6px solid transparent;filter:drop-shadow(0 0 4px rgba(212,175,55,.8))}
+  .earn-totals{display:grid;grid-template-columns:2fr 3fr;gap:14px;margin:10px 0 8px}
+  .earn-total-card{background:#101115;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+  .earn-total-label{color:#e9e2c6;font-weight:700;margin-bottom:6px}
+  .earn-total-value{font-size:28px;font-weight:900;color:#fff}
+  .earn-logic{color:#cfcfcf;display:grid;gap:6px}
+  .earn-story{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+  .earn-point{background:linear-gradient(135deg, rgba(245,197,66,.12), rgba(245,197,66,.04));border:1px solid rgba(245,197,66,.28);border-radius:14px;padding:12px;color:#ffe9b0;font-weight:700;text-align:center}
+  .earn-disclaimer{text-align:center;color:#bdbdbd;margin-top:16px;font-size:12px}
+  /* responsive */
+  @media (max-width: 960px){ .earn-flow{grid-template-columns:1fr 1fr;row-gap:16px} .earn-arrow{display:none} .earn-totals{grid-template-columns:1fr} .earn-story{grid-template-columns:1fr} }
+  @media (max-width: 520px){ .earn-flow{grid-template-columns:1fr} }
+</style>
 
-  <!-- Floating Chat -->
-  <div class="chat-fab" id="chatFab">💬</div>
-  <div class="chat-box" id="chatBox" aria-live="polite">
-    <div class="chat-head">
-      <span>Quick Q&A</span>
-      <div class="close-x" id="chatClose">✖</div>
-    </div>
-    <div class="chat-body">
-      <div class="q-list" id="qList">
-        <button class="q-btn" data-ans="Bilkul nahi. Fraud tab hota hai jab product/service hi na ho. Network Marketing legal sales model hai jisme genuine products sell hote hain aur sales ke hisaab se commission milta hai.">Kya Network Marketing fraud hai?</button>
-        <button class="q-btn" data-ans="Income sirf sales se hoti hai—ya to aap khud sell karein, ya aapki team sell kare. Company total sales volume ke hisaab se payout deti hai. No sales = no income.">Isme income kaise hoti hai?</button>
-        <button class="q-btn" data-ans="Yes. Hum 1:1 mentorship, training, scripts, tools aur weekly reviews dete hain—so aap kabhi akelay nahi hote.">Team support milta hai?</button>
-        <button class="q-btn" data-ans="Basic investment hota hai (usually product purchase). Ye paisa aapko product ke form me milta hai—waste nahi hota.">Investment karni padti hai?</button>
-        <button class="q-btn" data-ans="100%. Internet + phone/laptop se aap ghar se kaam kar sakte ho. Flexible hours.">Kya ghar se kar sakte hain?</button>
-        <button class="q-btn" data-ans="Mostly patience aur consistency ki kami. Log training skip karte hain aur 1-2 mahine me result expect karte hain. System follow karna key hai.">Log fail kyun hote hain?</button>
-      </div>
-      <div class="ans" id="answer">Tap a question to see the answer. | कोई प्रश्न चुनें और जवाब देखें।</div>
-    </div>
-  </div>
+<script>
+  // ---------- Config: Per-level commission (₹) ----------
+  const COMMISSIONS = [500, 200, 100, 50, 25]; // L1..L5
 
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
+  // ---------- Scenarios: members per level ----------
+  // We'll compute members from (R * A) ^ level and round smartly.
+  const scenarios = {
+    ideal:   { label: "Ideal",   R: 3, A: 1.0 },   // 100% activation
+    real:    { label: "Real",    R: 3, A: 0.6 },   // 60% activation
+    safe:    { label: "Safe",    R: 2, A: 0.5 },   // 50% activation
+  };
 
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach((en)=>{ if(en.isIntersecting) en.target.classList.add('show'); });
-    },{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  function calcMembersArray({R, A}) {
+    const factor = R * A;
+    const arr = [];
+    for (let i = 0; i < 5; i++){
+      const raw = Math.pow(factor, i+1); // L1..L5
+      // Nice rounding for display
+      let m = Math.round(raw);
+      if (m < 1) m = (raw > 0 ? 1 : 0);
+      arr.push(m);
+    }
+    return arr;
+  }
 
-    // Testimonials slider
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    let idx = 0;
-    setInterval(()=>{
-      if(!slides.length) return;
-      slides[idx].classList.remove('active');
-      idx = (idx + 1) % slides.length;
-      slides[idx].classList.add('active');
-    }, 3500);
+  // -------- CountUp util --------
+  function animateCount(el, to, duration=800){
+    const from = parseInt(el.textContent.replace(/[^\d]/g,'')) || 0;
+    const start = performance.now();
+    function frame(now){
+      const p = Math.min(1, (now - start)/duration);
+      const val = Math.floor(from + (to - from)*p);
+      el.textContent = val.toLocaleString('en-IN');
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
 
-    // Lead form -> WhatsApp message
-    const WA = '916398538328';
-    const form = document.getElementById('leadForm');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const goals = document.getElementById('goals').value.trim();
-      const msg = `New Team Lead%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email || '—')}%0AGoals: ${encodeURIComponent(goals || '—')}`;
-      const wa = `https://wa.me/${WA}?text=${msg}`;
-      window.open(wa, '_blank');
+  // -------- Render scenario --------
+  function renderScenario(key){
+    const s = scenarios[key];
+    // Tabs state
+    document.querySelectorAll('.earn-tab').forEach(t=>{
+      t.classList.toggle('is-active', t.dataset.scenario === key);
+      t.setAttribute('aria-selected', t.dataset.scenario === key ? 'true' : 'false');
     });
 
-    // 7 Icons interactions
-    const icons = document.querySelectorAll('.icon-card');
-    icons.forEach(card=>{
-      const noteDiv = card.querySelector('.icon-note');
-      noteDiv.textContent = card.dataset.note || '';
-      const toggle = () => {
-        const active = card.classList.contains('active');
-        icons.forEach(c=>c.classList.remove('active'));
-        if(!active) card.classList.add('active');
-      };
-      card.addEventListener('click', toggle);
-      card.addEventListener('keypress', (e)=>{ if(e.key==='Enter') toggle(); });
+    const members = calcMembersArray(s);
+
+    // Update per-level
+    members.forEach((m, i)=>{
+      const cp = COMMISSIONS[i];             // commission/person this level
+      const levelAmt = m * cp;               // level earning
+      // DOM elements
+      const mEl = document.querySelector(`.earn-members span[data-m="${i}"]`);
+      const cpEl = document.querySelector(`.earn-commission span[data-cp="${i}"]`);
+      const amtEl = document.querySelector(`.earn-amount span[data-amt="${i}"]`);
+
+      // animate
+      animateCount(mEl, m);
+      animateCount(cpEl, cp);
+      animateCount(amtEl, levelAmt);
     });
-    // close active icon if click outside
-    document.addEventListener('click', (e)=>{
-      const wrap = document.getElementById('iconGrid');
-      if(!wrap.contains(e.target)){
-        icons.forEach(c=>c.classList.remove('active'));
+
+    // Update total
+    const total = members.reduce((sum, m, i)=> sum + m * COMMISSIONS[i], 0);
+    animateCount(document.getElementById('earnTotal'), total, 900);
+
+    // Subtle pulse on bubbles to feel alive
+    document.querySelectorAll('.earn-bubble').forEach((b,i)=>{
+      b.style.animation = 'none';
+      b.offsetHeight; // reflow
+      b.style.animation = `earnPulse .9s ease ${i*0.05}s`;
+    });
+  }
+
+  // Keyframes (injected once)
+  (function injectPulse(){
+    const css = `
+      @keyframes earnPulse {
+        0% { box-shadow: 0 0 0 1px rgba(245,197,66,.12) inset, 0 0 0 rgba(0,0,0,0); transform: translateY(0) scale(1); }
+        40% { box-shadow: 0 0 0 1px rgba(245,197,66,.25) inset, 0 10px 24px rgba(245,197,66,.10); transform: translateY(-2px) scale(1.02); }
+        100% { box-shadow: 0 0 0 1px rgba(245,197,66,.12) inset, 0 0 0 rgba(0,0,0,0); transform: translateY(0) scale(1); }
       }
-    });
+    `;
+    const style = document.createElement('style');
+    style.innerHTML = css;
+    document.head.appendChild(style);
+  })();
 
-    // Floating chat box
-    const fab = document.getElementById('chatFab');
-    const chat = document.getElementById('chatBox');
-    const closeX = document.getElementById('chatClose');
-    const ans = document.getElementById('answer');
-    const qBtns = document.querySelectorAll('.q-btn');
+  // Tab events
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.earn-tab');
+    if (!btn) return;
+    renderScenario(btn.dataset.scenario);
+  });
 
-    fab.addEventListener('click', ()=>{ chat.style.display = (chat.style.display==='block'?'none':'block'); });
-    closeX.addEventListener('click', ()=> chat.style.display='none');
-    qBtns.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        ans.textContent = btn.dataset.ans || '';
-      });
-    });
-
-    // Console marker
-    document.addEventListener("DOMContentLoaded", () => {
-      console.log("Website loaded for Ajay Thakur - Network Marketing Expert (HD+ Extended)");
-    });
-  </script>
-</body>
-</html>
+  // Init default
+  renderScenario('ideal');
+</script>
+<!-- ====================== /EARNING GROWTH EXPLAINER ====================== --
