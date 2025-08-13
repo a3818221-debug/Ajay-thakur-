@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -6,134 +7,136 @@
   <meta name="description" content="Ajay Thakur — Marketing Expert & Network Growth Specialist. Join the winning team, learn proven strategies and start earning.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b0b0b;
-      --bg-2: #121212;
-      --text: #f7f7f7;
-      --muted: #cfcfcf;
-      --gold: #f5c542;           /* primary gold */
-      --gold-2: #d4af37;         /* deep gold */
-      --accent: #111921;         /* card */
-      --ring: 0 8px 30px rgba(245,197,66,.25);
-      --radius: 18px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(100% 120% at 0% 0%, rgba(245,197,66,.04), transparent 40%), linear-gradient(180deg, #000 0%, #0b0b0b 40%, #0b0b0b 100%);font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--text);scroll-behavior:smooth}
-    a{color:var(--gold)}/* Header / Nav */
-header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-.container{max-width:1100px;margin:auto;padding:0 16px}
-.nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-.brand .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 40% 40%, #fff 0 10%, var(--gold) 15%, var(--gold-2) 70%);box-shadow:0 0 18px rgba(245,197,66,.8)}
-.links{display:flex;gap:18px}
-.links a{color:#e9e2c6;text-decoration:none;font-weight:600;opacity:.8}
-.links a:hover{opacity:1}
-.cta{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;padding:52px 16px 28px;background:radial-gradient(60% 60% at 50% 0%, rgba(245,197,66,.1), transparent 70%)}
-.photo{width:180px;height:180px;border-radius:50%;border:6px solid var(--gold);box-shadow:0 0 40px rgba(245,197,66,.55), inset 0 0 40px rgba(245,197,66,.2);object-fit:cover}
-.glow{width:220px;height:220px;border-radius:50%;filter:blur(40px);background:radial-gradient(circle, rgba(245,197,66,.55), transparent 70%);position:absolute;transform:translateY(-10px);z-index:-1}
-.hero h1{font-size:clamp(32px,6vw,54px);margin:14px 0 6px;color:var(--gold);font-weight:800}
-.hero p.tag{color:#e7e0c7;font-weight:600;opacity:.95;margin:0 0 18px}
-.hero .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
-.btn.alt{background:#161616;color:#fff;border:1px solid rgba(255,255,255,.12)}
-
-/* Stat cards */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px auto 8px;max-width:900px}
-.stat{background:var(--accent);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px;text-align:center}
-.stat .n{font-size:26px;font-weight:800;color:#ffe08a}
-.stat .l{font-size:12px;color:var(--muted)}
-
-section{padding:48px 0}
-h2.section-title{font-size:26px;margin:0 0 12px;text-align:center}
-p.sub{text-align:center;color:var(--muted);margin:0 0 24px}
-
-/* Services */
-.grid{display:grid;gap:16px}
-.grid.s3{grid-template-columns:repeat(3,1fr)}
-.card{background:#121316;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;box-shadow:0 0 0 1px rgba(245,197,66,.08) inset}
-.card h3{margin:0 0 6px}
-.card p{margin:0;color:#dadada}
-
-/* Achievements */
-.badge-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.badge{padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(245,197,66,.15),rgba(245,197,66,.05));border:1px solid rgba(245,197,66,.35);color:#ffe08a;font-weight:700}
-
-/* Video */
-.video{max-width:900px;margin:auto;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--ring)}
-.video iframe{width:100%;height:360px;border:0;display:block;background:#000}
-
-/* Testimonials */
-.testi{max-width:900px;margin:10px auto 0}
-.slide{background:#111319;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;min-height:140px;display:none}
-.slide.active{display:block}
-.who{font-weight:700;color:#ffe08a;margin-top:8px}
-
-/* Join form */
-.form{max-width:880px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form input,.form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f1116;color:#fff;outline:none}
-.form textarea{min-height:120px;grid-column:1 / -1}
-.form .submit{grid-column:1 / -1}
-
-/* Sticky bar */
-.sticky{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:12px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);z-index:60}
-
-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
-
-/* reveal on scroll */
-.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}
-.reveal.show{opacity:1;transform:none}
-
-/* Responsive */
-@media (max-width: 960px){
-  .stats{grid-template-columns:1fr 1fr}
-  .grid.s3{grid-template-columns:1fr 1fr}
-  .form{grid-template-columns:1fr}
-  .video iframe{height:220px}
-}
-@media (max-width: 520px){
-  .links{display:none}
-  .stats{grid-template-columns:1fr}
-  .grid.s3{grid-template-columns:1fr}
-}
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- NAV -->
   <header>
     <div class="container nav">
-      <div class="brand"><span class="dot" aria-hidden="true"></span> Ajay <span style="color:var(--gold)">Thakur</span></div>
-      <div class="links" aria-label="Primary">
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Ajay <span class="gold">Thakur</span></div>
+      <nav class="links" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#achievements">Achievements</a>
+        <a href="#why">Why NM</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#join">Join</a>
-      </div>
-      <a class="cta" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20join%20your%20team!" target="_blank">WhatsApp</a>
+      </nav>
+      <a class="cta" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20join%20your%20team!" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div style="position:relative">
+    <div class="photo-wrap">
       <div class="glow" aria-hidden="true"></div>
       <img src="ajay.jpg" alt="Ajay Thakur" class="photo"/>
     </div>
     <h1 class="reveal">Ajay Thakur</h1>
-    <p class="tag reveal" style="transition-delay:.05s">Marketing Expert • Network Growth Specialist</p>
-    <div class="actions reveal" style="transition-delay:.1s">
+    <p class="tag reveal">Marketing Expert • Network Growth Specialist</p>
+    <div class="actions reveal">
       <a class="btn" href="tel:+916398538328">📞 Call Me Now</a>
       <a class="btn alt" href="#join">🚀 Join My Team</a>
     </div>
-    <div class="stats reveal" style="transition-delay:.15s">
+
+    <div class="stats reveal">
       <div class="stat"><div class="n">7+ Years</div><div class="l">Experience</div></div>
       <div class="stat"><div class="n">1200+</div><div class="l">People Mentored</div></div>
       <div class="stat"><div class="n">330+</div><div class="l">Workshops & Sessions</div></div>
+    </div>
+  </section>
+
+  <!-- WHY NETWORK MARKETING (HD Infographic) -->
+  <section id="why" class="container reveal">
+    <h2 class="section-title">Why People Choose Network Marketing</h2>
+    <p class="sub">Short, powerful reasons—explained in one glance.</p>
+
+    <div class="infographic">
+      <!-- Center hub -->
+      <div class="hub">
+        <div class="hub-inner">
+          <span class="hub-title">Network<br>Marketing</span>
+          <span class="hub-sub">= Freedom<br>+ Growth</span>
+        </div>
+      </div>
+
+      <!-- spokes (7) -->
+      <a class="node n1" href="#join" aria-label="Extra Income">
+        <div class="node-ico">
+          <!-- Dollar -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M7 6c0-2 2-3 5-3s5 1 5 3-2 3-5 3-5 1-5 3 2 3 5 3 5 1 5 3-2 3-5 3-5-1-5-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Extra Income</strong>
+          <span>Earn more. Live more.</span>
+        </div>
+      </a>
+
+      <a class="node n2" href="#join" aria-label="Low Cost">
+        <div class="node-ico">
+          <!-- Chart down bars (cost) -->
+          <svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V9M12 20V6M18 20V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Low Cost</strong>
+          <span>Small start, big future.</span>
+        </div>
+      </a>
+
+      <a class="node n3" href="#join" aria-label="Skill Development">
+        <div class="node-ico">
+          <!-- Clock/learn -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Skill Development</strong>
+          <span>Learn once, earn forever.</span>
+        </div>
+      </a>
+
+      <a class="node n4" href="#join" aria-label="Community">
+        <div class="node-ico">
+          <!-- Handshake -->
+          <svg viewBox="0 0 24 24"><path d="M7 13l3-3 3 3 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l5 5m15-5l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Community</strong>
+          <span>Together we rise.</span>
+        </div>
+      </a>
+
+      <a class="node n5" href="#join" aria-label="Legacy">
+        <div class="node-ico">
+          <!-- Trophy -->
+          <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 3h12v3a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V3zM6 6H4a3 3 0 0 0 3 3m11-3h2a3 3 0 0 1-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Legacy</strong>
+          <span>Income that outlives you.</span>
+        </div>
+      </a>
+
+      <a class="node n6" href="#join" aria-label="Unlimited Growth">
+        <div class="node-ico">
+          <!-- Arrow up -->
+          <svg viewBox="0 0 24 24"><path d="M4 20l8-8 8 8M12 12V4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Unlimited Growth</strong>
+          <span>No limits. Just possibilities.</span>
+        </div>
+      </a>
+
+      <a class="node n7" href="#join" aria-label="Time Freedom">
+        <div class="node-ico">
+          <!-- Clock simple -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12l3 2M12 7v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="node-text">
+          <strong>Time Freedom</strong>
+          <span>Your time, your rules.</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -157,16 +160,6 @@ footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:cent
       <span class="badge">🥇 Best Team Growth 2024</span>
       <span class="badge">🎤 300+ Stage Talks</span>
       <span class="badge">🌐 10k+ Community Reach</span>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section class="container reveal">
-    <h2 class="section-title">Watch: My Approach</h2>
-    <p class="sub">A quick 2-minute overview on how we help you start and scale.</p>
-    <div class="video">
-      <!-- Replace the src URL with your real video link -->
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -203,47 +196,16 @@ footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:cent
     </form>
   </section>
 
+  <!-- Sticky Quick Actions -->
   <div class="sticky">
     <a class="btn" href="tel:+916398538328">📞 Call</a>
-    <a class="btn" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20know%20more!" target="_blank">💬 WhatsApp</a>
+    <a class="btn" href="https://wa.me/916398538328?text=Hi%20Ajay%2C%20I%20want%20to%20know%20more!" target="_blank" rel="noopener">💬 WhatsApp</a>
   </div>
 
   <footer>
     <div class="container">© <span id="y"></span> Ajay Thakur · VIP Network Marketing</div>
   </footer>
 
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach((en)=>{ if(en.isIntersecting) en.target.classList.add('show'); });
-    },{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Testimonials slider
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    let idx = 0;
-    setInterval(()=>{
-      slides[idx].classList.remove('active');
-      idx = (idx + 1) % slides.length;
-      slides[idx].classList.add('active');
-    }, 3500);
-
-    // Lead form -> WhatsApp message
-    const WA = '916398538328';
-    const form = document.getElementById('leadForm');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const goals = document.getElementById('goals').value.trim();
-      const msg = `New Team Lead%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email || '—')}%0AGoals: ${encodeURIComponent(goals || '—')}`;
-      const wa = `https://wa.me/${WA}?text=${msg}`;
-      window.open(wa, '_blank');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
