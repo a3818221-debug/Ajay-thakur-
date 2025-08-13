@@ -1,96 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ajay Thakur - Marketing Expert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ajay Thakur — Marketing Expert | VIP</title>
+  <meta name="description" content="Ajay Thakur — Marketing Expert & Network Growth Specialist. Join the winning team, learn proven strategies and start earning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: white;
-      text-align: center;
+    :root{
+      --bg: #0b0b0b;
+      --bg-2: #121212;
+      --text: #f7f7f7;
+      --muted: #cfcfcf;
+      --gold: #f5c542;           /* primary gold */
+      --gold-2: #d4af37;         /* deep gold */
+      --accent: #111921;         /* card */
+      --ring: 0 8px 30px rgba(245,197,66,.25);
+      --radius: 18px;
     }
-    header {
-      padding: 40px 20px;
-    }
-    .profile-pic {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid gold;
-      box-shadow: 0 0 30px rgba(255,215,0,0.7);
-    }
-    h1 {
-      font-size: 2.5em;
-      margin: 20px 0 10px;
-      color: gold;
-    }
-    h2 {
-      font-size: 1.3em;
-      color: #ddd;
-      font-weight: 400;
-    }
-    .section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin-top: 20px;
-      background: gold;
-      color: black;
-      font-size: 1.1em;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
-    .cta-button:hover {
-      background: #ffcc00;
-      transform: scale(1.05);
-    }
-    footer {
-      background: #111;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888;
-      margin-top: 40px;
-    }
-    footer a {
-      color: gold;
-      text-decoration: none;
-    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(100% 120% at 0% 0%, rgba(245,197,66,.04), transparent 40%), linear-gradient(180deg, #000 0%, #0b0b0b 40%, #0b0b0b 100%);font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--text);scroll-behavior:smooth}
+    a{color:var(--gold)}/* Header / Nav */
+header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.container{max-width:1100px;margin:auto;padding:0 16px}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 40% 40%, #fff 0 10%, var(--gold) 15%, var(--gold-2) 70%);box-shadow:0 0 18px rgba(245,197,66,.8)}
+.links{display:flex;gap:18px}
+.links a{color:#e9e2c6;text-decoration:none;font-weight:600;opacity:.8}
+.links a:hover{opacity:1}
+.cta{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;padding:52px 16px 28px;background:radial-gradient(60% 60% at 50% 0%, rgba(245,197,66,.1), transparent 70%)}
+.photo{width:180px;height:180px;border-radius:50%;border:6px solid var(--gold);box-shadow:0 0 40px rgba(245,197,66,.55), inset 0 0 40px rgba(245,197,66,.2);object-fit:cover}
+.glow{width:220px;height:220px;border-radius:50%;filter:blur(40px);background:radial-gradient(circle, rgba(245,197,66,.55), transparent 70%);position:absolute;transform:translateY(-10px);z-index:-1}
+.hero h1{font-size:clamp(32px,6vw,54px);margin:14px 0 6px;color:var(--gold);font-weight:800}
+.hero p.tag{color:#e7e0c7;font-weight:600;opacity:.95;margin:0 0 18px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#000;text-decoration:none;font-weight:800;box-shadow:var(--ring)}
+.btn.alt{background:#161616;color:#fff;border:1px solid rgba(255,255,255,.12)}
+
+/* Stat cards */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px auto 8px;max-width:900px}
+.stat{background:var(--accent);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px;text-align:center}
+.stat .n{font-size:26px;font-weight:800;color:#ffe08a}
+.stat .l{font-size:12px;color:var(--muted)}
+
+section{padding:48px 0}
+h2.section-title{font-size:26px;margin:0 0 12px;text-align:center}
+p.sub{text-align:center;color:var(--muted);margin:0 0 24px}
+
+/* Services */
+.grid{display:grid;gap:16px}
+.grid.s3{grid-template-columns:repeat(3,1fr)}
+.card{background:#121316;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;box-shadow:0 0 0 1px rgba(245,197,66,.08) inset}
+.card h3{margin:0 0 6px}
+.card p{margin:0;color:#dadada}
+
+/* Achievements */
+.badge-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.badge{padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(245,197,66,.15),rgba(245,197,66,.05));border:1px solid rgba(245,197,66,.35);color:#ffe08a;font-weight:700}
+
+/* Video */
+.video{max-width:900px;margin:auto;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--ring)}
+.video iframe{width:100%;height:360px;border:0;display:block;background:#000}
+
+/* Testimonials */
+.testi{max-width:900px;margin:10px auto 0}
+.slide{background:#111319;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;min-height:140px;display:none}
+.slide.active{display:block}
+.who{font-weight:700;color:#ffe08a;margin-top:8px}
+
+/* Join form */
+.form{max-width:880px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form input,.form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f1116;color:#fff;outline:none}
+.form textarea{min-height:120px;grid-column:1 / -1}
+.form .submit{grid-column:1 / -1}
+
+/* Sticky bar */
+.sticky{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:12px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);z-index:60}
+
+footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width: 960px){
+  .stats{grid-template-columns:1fr 1fr}
+  .grid.s3{grid-template-columns:1fr 1fr}
+  .form{grid-template-columns:1fr}
+  .video iframe{height:220px}
+}
+@media (max-width: 520px){
+  .links{display:none}
+  .stats{grid-template-columns:1fr}
+  .grid.s3{grid-template-columns:1fr}
+}
+
   </style>
 </head>
 <body>
-
+  <!-- NAV -->
   <header>
-    <img src="ajay.jpg" alt="Ajay Thakur" class="profile-pic"/>
-    <h1>Ajay Thakur</h1>
-    <h2>Marketing Expert | Network Growth Specialist</h2>
-  </header>
+    <div class="container nav">
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Ajay <span style="color:var(--gold)">Thakur</span></div>
+      <div class="links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#join">Join</a>
+      </div>
+      <a class="cta" href="https://wa.me/918077302138?text=Hi%20Ajay%2C%20I%20want%20to%20join%20your%20team!" target="_blank">WhatsApp</a>
+    </div>
+  </header>  <!-- HERO -->  <section class="hero">
+    <div style="position:relative">
+      <div class="glow" aria-hidden="true"></div>
+      <img src="ajay.jpg" alt="Ajay Thakur" class="photo"/>
+    </div>
+    <h1 class="reveal">Ajay Thakur</h1>
+    <p class="tag reveal" style="transition-delay:.05s">Marketing Expert • Network Growth Specialist</p>
+    <div class="actions reveal" style="transition-delay:.1s">
+      <a class="btn" href="tel:+918077302138">📞 Call Me Now</a>
+      <a class="btn alt" href="#join">🚀 Join My Team</a>
+    </div>
+    <div class="stats reveal" style="transition-delay:.15s">
+      <div class="stat"><div class="n">7+ Years</div><div class="l">Experience</div></div>
+      <div class="stat"><div class="n">1200+</div><div class="l">People Mentored</div></div>
+      <div class="stat"><div class="n">330+</div><div class="l">Workshops & Sessions</div></div>
+    </div>
+  </section>  <!-- SERVICES -->  <section id="services" class="container reveal">
+    <h2 class="section-title">High-Value Services</h2>
+    <p class="sub">Focused on results, duplication and consistent growth.</p>
+    <div class="grid s3">
+      <div class="card"><h3>Team Building Systems</h3><p>Onboarding flows, duplication frameworks & culture that lasts.</p></div>
+      <div class="card"><h3>Digital Funnels</h3><p>Content, lead magnets & WhatsApp scripts that convert.</p></div>
+      <div class="card"><h3>Sales Coaching</h3><p>Objection handling, closing methods, and accountability.</p></div>
+    </div>
+  </section>  <!-- ACHIEVEMENTS -->  <section id="achievements" class="container reveal">
+    <h2 class="section-title">Achievements & Awards</h2>
+    <p class="sub">Milestones that build trust and momentum.</p>
+    <div class="badge-row">
+      <span class="badge">🏆 Diamond Director</span>
+      <span class="badge">🥇 Best Team Growth 2024</span>
+      <span class="badge">🎤 300+ Stage Talks</span>
+      <span class="badge">🌐 10k+ Community Reach</span>
+    </div>
+  </section>  <!-- VIDEO -->  <section class="container reveal">
+    <h2 class="section-title">Watch: My Approach</h2>
+    <p class="sub">A quick 2-minute overview on how we help you start and scale.</p>
+    <div class="video">
+      <!-- Replace the src URL with your real video link -->
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" allowfullscreen></iframe>
+    </div>
+  </section>  <!-- TESTIMONIALS -->  <section id="testimonials" class="container reveal">
+    <h2 class="section-title">What People Say</h2>
+    <p class="sub">Real results from real teammates & clients.</p>
+    <div class="testi">
+      <div class="slide active">
+        “Ajay sir ke 30–60–90 plan ne meri monthly income double kar di.”
+        <div class="who">— Rohan S., Team Lead</div>
+      </div>
+      <div class="slide">
+        “WhatsApp funnel scripts bahut powerful hain. Conversion rate 3x ho gaya.”
+        <div class="who">— Priya K., Marketer</div>
+      </div>
+      <div class="slide">
+        “Training aur support 10/10. Community se daily motivation milta hai.”
+        <div class="who">— Imran A., New Joiner</div>
+      </div>
+    </div>
+  </section>  <!-- JOIN -->  <section id="join" class="container reveal">
+    <h2 class="section-title">Join My Team</h2>
+    <p class="sub">Fill this quick form — you'll get a WhatsApp invite for a short discovery call.</p>
+    <form id="leadForm" class="form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="WhatsApp Number" required>
+      <input type="email" id="email" placeholder="Email (optional)">
+      <textarea id="goals" placeholder="Tell me about your goals (optional)"></textarea>
+      <button class="btn submit" type="submit">Submit & Open WhatsApp</button>
+    </form>
+  </section>  <div class="sticky">
+    <a class="btn" href="tel:+918077302138">📞 Call</a>
+    <a class="btn" href="https://wa.me/918077302138?text=Hi%20Ajay%2C%20I%20want%20to%20know%20more!" target="_blank">💬 WhatsApp</a>
+  </div>  <footer>
+    <div class="container">© <span id="y"></span> Ajay Thakur · VIP Network Marketing</div>
+  </footer>  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-  <section class="section">
-    <p>
-      Welcome! I'm Ajay Thakur, a marketing expert with years of experience helping individuals and teams achieve financial freedom through proven strategies and innovative marketing solutions.
-    </p>
-    <p>
-      Join my network and start your journey towards success today. Together, we will build a profitable and sustainable future.
-    </p>
-    <a href="tel:8077302138" class="cta-button">📞 Call Me Now</a>
-    <br/>
-    <a href="https://wa.me/918077302138" class="cta-button" style="margin-top:10px;">💬 Join on WhatsApp</a>
-  </section>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((en)=>{ if(en.isIntersecting) en.target.classList.add('show'); });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  <footer>
-    © 2025 Ajay Thakur | Designed for Network Marketing Success <br/>
-    📧 <a href="mailto:ajaythakur@example.com">ajaythakur@example.com</a>
-  </footer>
+    // Testimonials slider
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let idx = 0;
+    setInterval(()=>{
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % slides.length;
+      slides[idx].classList.add('active');
+    }, 3500);
 
-</body>
+    // Lead form -> WhatsApp message (and fallback mailto)
+    const WA = '918077302138';
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const goals = document.getElementById('goals').value.trim();
+      const msg = `New Team Lead%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email || '—')}%0AGoals: ${encodeURIComponent(goals || '—')}`;
+      const wa = `https://wa.me/${WA}?text=${msg}`;
+      window.open(wa, '_blank');
+    });
+  </script></body>
 </html>
